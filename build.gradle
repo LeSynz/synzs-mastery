@@ -15,8 +15,6 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
 	mods {
 		"synzsmastery" {
 			sourceSet sourceSets.main
