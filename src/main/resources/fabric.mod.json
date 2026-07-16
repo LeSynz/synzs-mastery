@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "synzs-mastery",
+	"id": "synzsmastery",
 	"version": "${version}",
 	"name": "Synz's Mastery",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -16,7 +16,7 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"xyz.synz.synzsmastery.SynzSMastery"
+          "xyz.synz.synzsmastery.SynzsMastery"
 		]
 	},
 	"mixins": [

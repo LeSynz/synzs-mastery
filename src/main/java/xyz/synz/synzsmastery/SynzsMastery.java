@@ -8,9 +8,13 @@ import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import xyz.synz.synzsmastery.command.MasteryCommand;
+import xyz.synz.synzsmastery.event.MasterySyncEvents;
+import xyz.synz.synzsmastery.event.WelcomeEvents;
 import xyz.synz.synzsmastery.util.Notify;
+import xyz.synz.synzsmastery.event.MiningEvents;
 
-public class SynzSMastery implements ModInitializer {
+public class SynzsMastery implements ModInitializer {
 	public static final String MOD_ID = "synzsmastery";
 	public static final String MOD_NAME = "Synz's Mastery";
 
@@ -20,6 +24,11 @@ public class SynzSMastery implements ModInitializer {
 	public void onInitialize() {
 		ServerLifecycleEvents.SERVER_STARTED.register(server ->
 				Notify.success(server, MOD_NAME + " is active!"));
+
+		MiningEvents.register();
+		WelcomeEvents.register();
+		MasterySyncEvents.register();
+		MasteryCommand.register();
 	}
 
 	public static Identifier id(String path) {
